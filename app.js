@@ -17,7 +17,7 @@ function getIP(input) {
         console.log(latitude, longitude);
 
         mapit(latitude , longitude);
-
+        render_user_info(data);
     });
 }
 
@@ -35,6 +35,33 @@ function mapit(latitude,longitude){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         // className: 'map-tiles'
     }).addTo(mymap);
+}
+
+function render_user_info(data) {
+
+    var infoTable = document.getElementById('user-info');
+    infoTable.className == infoTable.id == "info-table";
+
+    infoTable.innerHTML = 
+    `<tr>
+        <th>Ip</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Postal code</th>
+        <th>Internet Provider</th>
+    </tr>
+
+    <tr>
+        <td>${data.ip}</td>
+        <td>${data.city}</td>
+        <td>${data.region}</td>
+        <td>${data.country_name}</td>
+        <td>${data.postal}</td>
+        <td>${data.carrier.name}</td>
+    </tr>
+    `
+    infoTable.style.transition = "0.2s ease";
 }
 
 document.getElementById('user-ip-btn').addEventListener('click' , getIP);
