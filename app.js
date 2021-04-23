@@ -49,7 +49,6 @@ function render_user_info(data) {
         <th>State</th>
         <th>Country</th>
         <th>Postal code</th>
-        <th>Internet Provider</th>
     </tr>
 
     <tr>
@@ -58,7 +57,6 @@ function render_user_info(data) {
         <td>${data.region}</td>
         <td>${data.country_name}</td>
         <td>${data.postal}</td>
-        <td>${data.carrier.name}</td>
     </tr>
     `
     infoTable.style.transition = "0.2s ease";
