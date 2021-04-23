@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport">
+    <title>IP tracker</title>
+    <script src="index.js" defer></script>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+</head>
+<body>
+    <div class="top-container">
+        <h1 id="main-heading">IP tracker</h1>
+
+        <button id="user-ip-btn">Whats my IP address?</button>
+        <button id="input-custom-ip">Search for a custom IP address</button>
+
+        <div class="input-container" id="input-container">
+            <input type="text" id="ip-input">
+        </div>
+    </div>
+
+    <div id="mapid"></div>
+
+</body>
+</html>
