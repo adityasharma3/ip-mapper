@@ -2,9 +2,9 @@ var ip_address = '';
 var city = '';
 var country_code = '';
 
-function getIP(input) {
+function getIP() {
     async function json(url) {
-    return await fetch(url).then(res => res.json());
+        return await fetch(url).then(res => res.json());
     }
 
     let apiKey = 'bcd5b4ee60b2c1b1cda872ad275d3c2be5ec7201a5e12eff02495b21';
@@ -33,7 +33,6 @@ function mapit(latitude,longitude){
 
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        // className: 'map-tiles'
     }).addTo(mymap);
 }
 
